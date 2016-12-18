@@ -1,8 +1,11 @@
 package example;
 
+import com.ixuning.requests.request.Header;
 import com.ixuning.requests.request.RequestClient;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by me on 2016/12/18.
