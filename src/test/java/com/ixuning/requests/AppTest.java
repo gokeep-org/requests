@@ -1,4 +1,4 @@
-package com.ixuning;
+package com.ixuning.requests;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
