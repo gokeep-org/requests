@@ -55,7 +55,6 @@ public class RequestClient {
     }
     public String getStringResponse() {
         String errorFalg=UUID.randomUUID().toString();
-        System.out.println(errorFalg);
         String strRes= errorFalg;
         RequestOperation requestOperation = RequestFactory.getRequestMethod(this);
         HttpResponse httpResponse = requestOperation.execute();
@@ -81,7 +80,6 @@ public class RequestClient {
     }
     public String getJsonResponse() {
         String errorFalg=UUID.randomUUID().toString();
-        System.out.println(errorFalg);
         String strRes= errorFalg;
         RequestOperation requestOperation = RequestFactory.getRequestMethod(this);
         HttpResponse httpResponse = requestOperation.execute();
