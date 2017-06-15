@@ -1,38 +1,34 @@
 package com.ixuning.requests;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.xuning.requests.Requests;
+import com.xuning.requests.core.RequestImpl;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+public class AppTest {
+    public static Requests requests;
+    private static final Logger LOGGER = LoggerFactory.getLogger(AppTest.class);
+
+    @Before
+    public void before() {
+        requests = new RequestImpl();
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    @Test
+    public void sendSimpleRequest() {
+        String res = requests.get("http://www.baidu.com").text();
+        LOGGER.info(res);
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @After
+    public void destory(){
+        LOGGER.info("requests end");
     }
 }
