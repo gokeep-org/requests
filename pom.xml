@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ixuning</groupId>
+    <groupId>com.networklab</groupId>
     <artifactId>requests</artifactId>
-    <version>3.0.1</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>requests</name>
@@ -20,7 +20,6 @@
         <junit.version>4.12</junit.version>
         <hamcrest.version>1.3</hamcrest.version>
     </properties>
-
 
     <!--compiler-->
     <dependencies>
@@ -123,9 +122,9 @@
     <!--my infoemation-->
     <developers>
         <developer>
-            <name>yifangyun_xuning</name>
+            <name>xuning</name>
             <email>1748373312@qq.com</email>
-            <organization>fangcloud</organization>
+            <organization>networklab.cn</organization>
         </developer>
     </developers>
     <!--GPG-->
