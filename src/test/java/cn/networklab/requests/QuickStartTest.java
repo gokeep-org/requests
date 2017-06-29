@@ -28,10 +28,8 @@ public class QuickStartTest {
      */
     @Test
     public void sendSimpleRequest() {
-        
         String res = client.get("http://www.baidu.com").text();
         LOGGER.info(res);
-        client.get({url}, {params}, {headers}).inputStream()
     }
 
     @After
