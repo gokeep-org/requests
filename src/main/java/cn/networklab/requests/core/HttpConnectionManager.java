@@ -1,9 +1,6 @@
 package cn.networklab.requests.core;
 
-import java.security.NoSuchAlgorithmException;
-
-import javax.net.ssl.SSLContext;
-
+import cn.networklab.requests.exception.RequestsException;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.socket.ConnectionSocketFactory;
@@ -14,15 +11,10 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
-import cn.networklab.requests.exception.RequestsException;
+import javax.net.ssl.SSLContext;
+import java.security.NoSuchAlgorithmException;
 
 
-/****************************************
- * Copyright (c) xuning.
- * 尊重版权，禁止抄袭!
- * 如有违反，必将追究其法律责任.
- * @Auther is xuning on 2017/5/6.
- ****************************************/
 public class HttpConnectionManager {
     /**
      * 数据库连接池配置信息
@@ -60,7 +52,7 @@ public class HttpConnectionManager {
      * 获取连接池中的连接对象
      * 提供给Apache HttpClient创建该对象信息，直接
      * HttpClient连接池中去拿
-     * @return
+     * @return CloseableHttpClient
      */
     public static CloseableHttpClient getHttpClient() {
         CloseableHttpClient httpClient = HttpClients.custom()
