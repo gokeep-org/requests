@@ -114,7 +114,7 @@
     </licenses>
     <!--Scm Config-->
     <scm>
-        <tag>master</tag>
+        <tag>dev</tag>
         <url>https://github.com/smartning/requests.git</url>
         <connection>scm:git:git@github.com:smartning/requests.git</connection>
         <developerConnection>scm:git:git@github.com:smartning/requests.git</developerConnection>
