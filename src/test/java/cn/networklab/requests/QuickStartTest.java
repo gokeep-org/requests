@@ -12,22 +12,28 @@ import cn.networklab.requests.core.RequestImpl;
  * Unit test for simple App.
  */
 public class QuickStartTest {
-    public static Requests requests;
+    public static Requests client;
     private static final Logger LOGGER = LoggerFactory.getLogger(QuickStartTest.class);
 
+    /**
+     * 第一步： 实例化client对象，建议设为单例
+     */
     @Before
     public void before() {
-        requests = new RequestImpl();
+        client = new RequestImpl();
     }
 
+    /**
+     * 第二步：发送请求，获取
+     */
     @Test
     public void sendSimpleRequest() {
-        String res = requests.get("http://www.baidu.com").text();
+        String res = client.get("http://www.baidu.com").text();
         LOGGER.info(res);
     }
 
     @After
     public void destory(){
-        LOGGER.info("requests end");
+        LOGGER.info("client request end");
     }
 }
