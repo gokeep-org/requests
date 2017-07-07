@@ -23,6 +23,7 @@ public class QuickStartTest {
         client = new RequestImpl();
     }
 
+
     /**
      * 第二步：发送请求，获取
      */
