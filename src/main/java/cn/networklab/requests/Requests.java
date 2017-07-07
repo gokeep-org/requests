@@ -100,4 +100,9 @@ public interface Requests {
     public HttpResponse request(
             String url, String method, Map<String, String> params, Map<String, Object> postForms, Object body, Map<String, String> headers
     );
+
+    default String version(){
+        return "1.0.0";
+    }
+
 }

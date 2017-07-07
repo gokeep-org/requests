@@ -19,7 +19,7 @@ public abstract class RequestClient<T> {
     private String loggerString = "";
 
     protected CloseableHttpClient openHttpClient() {
-//        httpClient = HttpClients.createDefault();
+        //httpClient = HttpClients.createDefault();
         httpClient = cn.networklab.requests.core.HttpConnectionManager.getHttpClient();
         return httpClient;
     }
