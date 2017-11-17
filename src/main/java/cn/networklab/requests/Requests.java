@@ -5,7 +5,12 @@ import java.util.Map;
 
 import cn.networklab.requests.bean.HttpResponse;
 
-
+/**
+ *Requests 框架接口
+ * 支持：GET，POST, PUT, DELETE 方法请求
+ * 建议：使用该框架发送Restful类型请求
+ * 默认实例化时使用默认的实现即可，Requests client = new Requests();
+ */
 public interface Requests {
 
     public HttpResponse get(
